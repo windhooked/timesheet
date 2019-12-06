@@ -1,0 +1,10 @@
+created_at,name,type
+2019-12-06 10:45:22,On-site,work
+2019-12-06 10:45:22,Standard,work
+2019-12-06 10:45:22,Standard Weekend,work
+2019-12-06 10:45:22,Standard Holiday,work
+2019-12-06 10:45:22,Vacation,not-work
+2019-12-06 10:45:22,Sick Day,not-work
+2019-12-06 10:45:22,Personal Day,not-work
+2019-12-06 10:45:22,Unpaid Leave,not-work
+2019-12-06 10:45:22,Sick,not-work

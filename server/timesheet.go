@@ -4,8 +4,8 @@ package main
 
 import (
 	"github.com/sirupsen/logrus"
-	"github.com/valasek/timesheet/server/cmd"
-	"github.com/valasek/timesheet/server/logger"
+	"hannesdw/timesheet/server/cmd"
+	"hannesdw/timesheet/server/logger"
 )
 
 func main() {

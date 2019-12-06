@@ -11,9 +11,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/valasek/timesheet/server/api"
-	"github.com/valasek/timesheet/server/logger"
-	"github.com/valasek/timesheet/server/routes"
+	"hannesdw/timesheet/server/api"
+	"hannesdw/timesheet/server/logger"
+	"hannesdw/timesheet/server/routes"
 
 	"github.com/gin-gonic/autotls"
 	"github.com/robfig/cron"

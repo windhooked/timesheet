@@ -5,7 +5,7 @@ package models
 import (
 	"strings"
 
-	"github.com/valasek/timesheet/server/logger"
+	"hannesdw/timesheet/server/logger"
 
 	"os"
 	"time"

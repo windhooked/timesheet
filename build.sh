@@ -68,7 +68,7 @@ cp -r ./documentation/statics ./../build/documentation/statics/
 echo Linux, 64-bit...
 GOOS=linux
 GOARCH=amd64
-go build -ldflags "-X github.com/valasek/timesheet/server/version.Version=$version" -o ./../build/timesheet.bin ./timesheet.go
+go build -ldflags "-X hannesdw/timesheet/server/version.Version=$version" -o ./../build/timesheet.bin ./timesheet.go
 # echo Raspberry Pi, ARM 5 ...
 # GOOS=linux
 # GOARCH=arm

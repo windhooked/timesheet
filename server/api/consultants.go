@@ -7,8 +7,8 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/valasek/timesheet/server/logger"
-	"github.com/valasek/timesheet/server/models"
+	"hannesdw/timesheet/server/logger"
+	"hannesdw/timesheet/server/models"
 )
 
 // ConsultantList returns list of all consultants

@@ -3,7 +3,7 @@
 package models
 
 import (
-	"github.com/valasek/timesheet/server/logger"
+	"hannesdw/timesheet/server/logger"
 
 	"os"
 	"time"

@@ -7,8 +7,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/valasek/timesheet/server/logger"
-	"github.com/valasek/timesheet/server/version"
+	"hannesdw/timesheet/server/logger"
+	"hannesdw/timesheet/server/version"
 
 	nested "github.com/antonfisher/nested-logrus-formatter"
 	"github.com/orandin/lumberjackrus"
@@ -61,6 +61,7 @@ func initConfig() {
 	if cfgFile != "" {
 		// Use config file from the flag.
 		viper.SetConfigFile(cfgFile)
+		 fmt.Println("config file:      ", viper.ConfigFileUsed())
 	} else {
 		// get current folder
 		curDir, err := os.Getwd()
@@ -78,7 +79,7 @@ func initConfig() {
 
 	// If a config file is found, read it in.
 	if err := viper.ReadInConfig(); err == nil {
-		// fmt.Println("config file:      ", viper.ConfigFileUsed())
+		 fmt.Println("config file:      ", viper.ConfigFileUsed())
 	}
 
 	initLogger()

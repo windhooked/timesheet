@@ -1,0 +1,18 @@
+created_at,name,rate,disabled
+2019-12-06 10:45:22,Vue,Standard,false
+2019-12-06 10:45:22,Google,Standard,false
+2019-12-06 10:45:22,Spotify,Standard,false
+2019-12-06 10:45:22,Quasar,Standard,false
+2019-12-06 10:45:22,Python,Standard,false
+2019-12-06 10:45:22,Ruby on Rails,Standard,false
+2019-12-06 10:45:22,React,Standard,false
+2019-12-06 10:45:22,_Training,Standard,false
+2019-12-06 10:45:22,_Sales,Standard,false
+2019-12-06 10:45:22,_People mgmt,Standard,false
+2019-12-06 10:45:22,_Travel Time,Standard,false
+2019-12-06 10:45:22,_Vacation,Vacation,false
+2019-12-06 10:45:22,_Sick,Sick,false
+2019-12-06 10:45:22,_Unpaid Leave,Unpaid Leave,false
+2019-12-06 10:45:22,_Project management,Standard,false
+2019-12-06 10:45:22,_Sick Day,Sick Day,false
+2019-12-06 10:45:22,_Personal Day,Personal Day,false

@@ -1,0 +1,82 @@
+### Default configuration file
+
+######################
+# Reporting settings #
+
+dailyWorkingHours: 8 # Used to calculate weekly and monthly expected working hours, can be changed in UI
+dailyWorkingHoursMin: 8 # Used to highlight if reported less, can be changed in UI
+dailyWorkingHoursMax: 12 # Used to highlight if reported more, can be changed in UI
+
+# Rate used for vacations
+vacation: "Vacation"
+yearlyVacationDays: 20 # Used to calculate weekly and monthly expected working hours, can be changed in UI
+
+# Rate for additional vacations. If not used, leave blank "" and set yearlyPersonalDays: 0, can be changed in UI
+vacationPersonal: "Personal Day"
+yearlyPersonalDays: 3 # Used to calculate weekly and monthly expected working hours, can be changed in UI
+
+# Rate used for additional vacation intended for sick day. If not used, leave blank "" and set yearlySickDays: 0, can be changed in UI
+vacationSick: "Sick Day"
+yearlySickDays: 2 # Used to calculate weekly and monthly expected working hours, can be changed in UI
+
+# Categorize all rates into one of these types used on Reported Overview page
+isWorking: "work" # when consultant works, can be changed in UI
+isNonWorking: "not-work" # when consultant dows not work, examples: vacation, sick, personal day, public holiday, vacation, unpaid leave, ..., can be changed in UI
+
+########################
+# Application settings #
+SSL: false # true/false, if server has SSL certificate set to true to use HTTPS, false = HTTP
+GIN_MODE: "release" # "debug" or "release" - switch server app mode
+url: "" # URL on which application is running
+# PORT: "443"                   # port on which application is running
+PORT: "3000" # port on which application is running
+
+# DB type
+dbType: "postgresql" # allowed types postgresql or mysql
+
+# Production URL - will be read from production environment config variable
+# If set, Database settings section variables will be ignored
+DATABASE_URL: ""
+
+# Log folder, relative to timesheet folder
+logFolder: "logs"
+
+# # Folder for uploaded data, relative to timesheet folder
+uploadFolder: "data/uploaded"
+uploadFolderTemp: "data/uploaded/temp"
+
+# csv data files which are loaded via command "timesheet db --load all"
+data:
+  consultants: "consultants_cloud.csv"
+  rates: "rates_cloud.csv"
+  projects: "projects_cloud.csv"
+  reportedRecords: "reported_records_cloud.csv"
+  holidays: "holidays_us_2019.csv"
+
+export:
+  location: "data/exported" # select an empty and an existing folder
+
+#####################
+# Database settings #
+
+# DB backup settings - backup data can be imported directly by a command "timesheet db --load all"
+backup:
+  location: "data/backups" # select an empty and an existing folder relative to timesheet/data folder
+  rotation: 14 # how many backups back will be kept
+  interval: "daily" # daily or weekly - how often the DB backup should be done
+
+# DB credentials
+# used for development and testing. Ignored if DATABASE_URL is set
+postgresql:
+  host: "db" #
+  # host: "127.0.0.1" #
+  port: "5432"
+  name: "timesheet"
+  user: "timesheet"
+  password: "timesheet"
+  sslMode: "disable"
+
+mysql:
+  user: "timesheet"
+  password: "timesheet"
+  dbname: "timesheet"

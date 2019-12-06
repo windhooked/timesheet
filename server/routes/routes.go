@@ -3,8 +3,8 @@
 package routes
 
 import (
-	"github.com/valasek/timesheet/server/api"
-	"github.com/valasek/timesheet/server/logger"
+	"hannesdw/timesheet/server/api"
+	"hannesdw/timesheet/server/logger"
 
 	"fmt"
 	"net/http"

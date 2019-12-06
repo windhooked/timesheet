@@ -5,7 +5,7 @@ package models
 import (
 	"strings"
 
-	"github.com/valasek/timesheet/server/logger"
+	"hannesdw/timesheet/server/logger"
 
 	"fmt"
 	"math/rand"
@@ -18,6 +18,7 @@ import (
 
 	// postgress db driver
 	_ "github.com/jinzhu/gorm/dialects/postgres"
+	_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
 
 // ReportedRecord struct

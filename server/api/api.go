@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/valasek/timesheet/server/logger"
-	"github.com/valasek/timesheet/server/models"
-	"github.com/valasek/timesheet/server/version"
+	"hannesdw/timesheet/server/logger"
+	"hannesdw/timesheet/server/models"
+	"hannesdw/timesheet/server/version"
 
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"

@@ -6,11 +6,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/valasek/timesheet/server/logger"
+	"hannesdw/timesheet/server/logger"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"    // needed because of gorm design
 	_ "github.com/jinzhu/gorm/dialects/postgres" // needed because of gorm design
+	_ "github.com/jinzhu/gorm/dialects/sqlite" // needed because of gorm design
 )
 
 // DB abstraction
@@ -97,6 +98,26 @@ func NewMySQLDB(dataSourceName string) *DB {
 	if err = db.DB().Ping(); err != nil {
 		// panic("ping", err)
 		logger.Log.Error("cannot ping mysql, error: ", err)
+		os.Exit(1)
+	}
+
+	// db.LogMode(true)
+
+	return &DB{db}
+}
+
+// NewMySQLDB - mysql database
+func NewSQLiteDB(dataSourceName string) *DB {
+
+	db, err := gorm.Open("sqlite3", dataSourceName)
+	if err != nil {
+		logger.Log.Error("cannot open sqlite connection, error: ", err)
+		os.Exit(1)
+	}
+
+	if err = db.DB().Ping(); err != nil {
+		// panic("ping", err)
+		logger.Log.Error("cannot ping sqlite, error: ", err)
 		os.Exit(1)
 	}
 

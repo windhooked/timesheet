@@ -15,8 +15,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/valasek/timesheet/server/logger"
-	"github.com/valasek/timesheet/server/models"
+	"hannesdw/timesheet/server/logger"
+	"hannesdw/timesheet/server/models"
 
 	"github.com/spf13/viper"
 )
@@ -196,6 +196,11 @@ func ConnectDB() (db *models.DB) {
 				"?charset=utf8&parseTime=True&loc=Local"
 		}
 		// gorm.Open("mysql", "user:password@/dbname?charset=utf8&parseTime=True&loc=Local")
+		logger.Log.Info("connecting to DB ", dbURL)
+		db = models.NewMySQLDB(dbURL)
+		logger.Log.Info("connected to DB ", dbURL)
+	case "sqlite3":
+		dbURL := viper.GetString("DATABASE_URL")
 		logger.Log.Info("connecting to DB ", dbURL)
 		db = models.NewMySQLDB(dbURL)
 		logger.Log.Info("connected to DB ", dbURL)

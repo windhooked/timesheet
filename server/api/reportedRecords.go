@@ -3,8 +3,8 @@
 package api
 
 import (
-	"github.com/valasek/timesheet/server/logger"
-	"github.com/valasek/timesheet/server/models"
+	"hannesdw/timesheet/server/logger"
+	"hannesdw/timesheet/server/models"
 
 	"fmt"
 	"github.com/gin-gonic/gin"
